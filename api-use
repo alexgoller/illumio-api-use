@@ -1,0 +1,12 @@
+#!/bin/sh
+
+FILE=$1
+
+export ILO_API_KEY_ID=`jq -r '.key_id' < $FILE`
+export ILO_API_KEY=`jq -r '.auth_username' < $FILE`
+export ILO_API_TOKEN=`jq -r '.secret' < $FILE`
+
+echo "Setting vars found in $FILE"
+echo "ILO_API_KEY_ID = $ILO_API_KEY_ID" 
+echo "ILO_API_KEY = $ILO_API_KEY" 
+echo "ILO_API_TOKEN = $ILO_API_TOKEN" 
