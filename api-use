@@ -16,5 +16,5 @@ if [ -f $FILE ]; then
 	echo "ILO_API_TOKEN = $ILO_API_TOKEN" 
 else
 	echo "File does not exist."
-	usage()
+	usage
 fi
